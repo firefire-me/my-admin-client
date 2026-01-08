@@ -4,7 +4,7 @@ import axios from "axios";
 import { message } from "ant-design-vue";
 
 // ⚠️这里填你后端部署后的 Vercel 域名，本地测试填 http://localhost:3000
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const users = ref<any[]>([]);
 const loading = ref(false);
@@ -38,7 +38,7 @@ const addUser = async () => {
 
 onMounted(() => {
   // 页面加载时获取数据
-  // fetchUsers();
+  fetchUsers();
 });
 </script>
 
